@@ -1,16 +1,14 @@
 Package.describe({
-    name: 'rzymek:fullcalendar',
+    name: 'sekmet:fullcalendar',
     summary: "Full-sized drag & drop event calendar (jQuery plugin)",
     version: "2.6.0",
-    git: "https://github.com/rzymek/meteor-fullcalendar.git"
+    git: "https://github.com/sekmet/meteor-fullcalendar.git"
 });
 
 Package.onUse(function(api) {
-    api.versionsFrom('METEOR@0.9.2.2');
-    api.use([
-        'momentjs:moment@2.8.4',
-        'templating'
-    ], 'client');
+    api.versionsFrom('1.2.1');
+    api.use(['momentjs:moment@2.8.4'], {weak: true});
+    api.use(['templating'], 'client');
     api.addFiles([
         'fullcalendar/dist/fullcalendar.js',
         'fullcalendar/dist/fullcalendar.css',
